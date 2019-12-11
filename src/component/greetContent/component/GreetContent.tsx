@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { random } from 'lodash'
 import { ThemeState } from '@types'
 
 import useTypeWritter from 'react-typewriter-hook'

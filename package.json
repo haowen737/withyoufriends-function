@@ -28,7 +28,6 @@
     "history": "^4.7.2",
     "html-webpack-plugin": "^4.0.0-alpha.2",
     "jest": "^24.8.0",
-    "lodash": "^4.17.11",
     "mobx": "^5.1.1",
     "mobx-react": "^5.2.8",
     "object-assign": "4.1.1",
