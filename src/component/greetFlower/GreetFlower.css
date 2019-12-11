@@ -1,0 +1,50 @@
+.greet-flower {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.fade-list {
+  position: absolute;
+  height: 80%;
+  width: 70%;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.fade-list p {
+  font-family:'HoangYen11e69771abb1a95c';
+  font-size: 1.4rem;
+  color: #666;
+  line-height: 2;
+  font-weight: 100;
+  letter-spacing: .6rem;
+  transition: all 1s;
+  cursor: default;
+  user-select: none;
+}
+.fade-appear {
+  opacity: 0;
+}
+.fade-appear-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 800ms ease-in;
+}
+
+

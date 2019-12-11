@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/article/list.js": {
+      "includeFiles": "doc/**"
+    }
+  }
+}

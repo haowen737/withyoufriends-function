@@ -1,0 +1,63 @@
+.window {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  font-size: 1.4rem;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  color: #000;
+  animation: textColor 15s ease infinite;
+}
+.window:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(2.5);
+  -webkit-filter: blur(30px);
+  -moz-filter: blur(30px);
+  -ms-filter: blur(30px);
+  filter: blur(30px);
+  background: linear-gradient(270deg, #91ffe3, #c593ff);
+  background-size: 200% 200%;
+  animation: animateGlow 15s ease infinite;
+}
+
+@keyframes animateGlow {
+  0%{
+    transform: scale(2.5);
+    filter: blur(40px);
+    background-position:0% 50%
+  }
+  50%{
+    transform: scale(2.5);
+    filter: blur(50px);
+    background-position:100% 50%
+  }
+  100%{
+    transform: scale(2.5);
+    filter: blur(40px);
+    background-position:0% 50%
+  }
+}
+
+@keyframes textColor {
+  0% {
+    color: #111111;
+  }
+  50% {
+    color: #444444;
+  }
+  100% {
+    color: #111111;
+  }
+}

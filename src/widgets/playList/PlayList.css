@@ -1,0 +1,37 @@
+.playlist-container {
+  position: absolute;
+  top: 20%;
+  left: 10rem;
+  transition: all 1s linear;
+}
+.summary {
+  position: absolute;
+  right: -10px;
+  transform: translateX(100%);
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 500;
+  font-family: 'arial';
+  transition: all 1s;
+}
+.item {
+  margin-right: 5px;
+  width: 2px;
+  height: 7rem;
+  float:left;
+  animation: ul-animation .6s linear;
+  opacity: 1;
+  transition: all .6s linear;
+  vertical-align: bottom;
+  border-radius: 100px;
+}
+@keyframes ul-animation {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}

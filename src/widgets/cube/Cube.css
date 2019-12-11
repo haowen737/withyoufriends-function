@@ -1,0 +1,10 @@
+.surface {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  transform: translateY(-50%);
+  width: 260px;
+  height: 260px;
+  transition: all .7s ease;
+  border: 1px solid rgba(0,0,0,.1);
+}

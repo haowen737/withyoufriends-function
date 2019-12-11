@@ -1,0 +1,28 @@
+{
+  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": [
+      "src/**/*.js",
+      "src/codepen/*.js",
+      "config/**/*.js",
+      "node_modules/**/*.ts"
+    ]
+  },
+  "rules" : {
+    "no-unused-expression": [
+      false,
+      "allowShortCircuit",
+      "allowTernary",
+      "allow-fast-null-checks"
+    ],
+    "ordered-imports": false,
+    "jsx-no-lambda": false,
+    "interface-name": [true, "never-prefix"],
+    "object-literal-sort-keys": false,
+    "no-console": false,
+    "member-ordering": [true, { "order": "fields-first" }],
+    "member-access": false,
+    "jsx-boolean-value": false,
+    "only-arrow-functions": false
+  }
+}

@@ -1,0 +1,46 @@
+@font-face {
+  font-family: slim-joe;
+  src: url('./assets/font/slim-joe.otf');
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 510386 */
+  src: url('//at.alicdn.com/t/font_510386_mtg9v8tve8qia4i.eot');
+  src: url('//at.alicdn.com/t/font_510386_mtg9v8tve8qia4i.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_510386_mtg9v8tve8qia4i.woff') format('woff'),
+  url('//at.alicdn.com/t/font_510386_mtg9v8tve8qia4i.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_510386_mtg9v8tve8qia4i.svg#iconfont') format('svg');
+}
+html,body,h1,h2,h3,h4,h5,h6,div,ul,li,p{margin:0;padding:0;}
+header,footer,section,article,aside,nav{display:block;}
+html {
+  font-size: 12px;
+  /* user-select: ; */
+  font-family: 'Quicksand', 'Roboto', 'arial', 'HelveticaNeue', sans-serif;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.clearfix {
+  position: relative;
+}
+.clearfix::after {
+  content: '';
+  display:block;
+  visibility: hidden;
+  clear: both;
+}
+#root {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
