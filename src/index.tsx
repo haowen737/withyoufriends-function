@@ -11,7 +11,7 @@ import myRedux from './reducers'
 
 import './index.css'
 import App from './component/app/App'
-// import registerServiceWorker from './registerServiceWorker'
+import registerServiceWorker from './registerServiceWorker'
 
 interface RootProps {
   apis: any
@@ -37,4 +37,4 @@ const renderRoot = () => {
 renderRoot()
 
 
-// process.env.NODE_ENV !== 'development' && registerServiceWorker()
+process.env.NODE_ENV !== 'development' && registerServiceWorker()
