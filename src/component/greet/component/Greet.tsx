@@ -6,7 +6,7 @@ import {RouteComponentProps} from "react-router"
 import GreetContent from '../../greetContent'
 // import GreetFlower from '../greetFlower/GreetFlower'
 import GreetHeader from '../../greetHeader/GreetHeader'
-import SocialLinkList from './SocialLinkList'
+// import SocialLinkList from './SocialLinkList'
 import GreetCanvas from './GreetCanvas'
 
 import { ThemeEnum } from '../../../Hero.service'
@@ -97,7 +97,7 @@ export default class Greet extends React.Component<Props & RouteComponentProps<a
   renderStartButton(): JSX.Element | void {
     const { startButtonHidden } = this.state
     const { color, btnTheme } = this.props.theme
-    console.log('style---', greetStyle)
+
     return (
       <div>
         <ParticleEffectButton

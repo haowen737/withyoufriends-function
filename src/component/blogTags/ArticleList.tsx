@@ -2,7 +2,8 @@ import * as React from 'react'
 import { Transition } from 'react-transition-group'
 
 import { defaultStyle, transitionStyles } from './TransitionConfig'
-import { DateFormat, Swagger } from '@utils'
+import { DateFormat } from '@utils'
+import Axios from 'axios'
 
 interface Props {
   activeTag: any
@@ -81,11 +82,11 @@ export default class ArticleList extends React.Component<Props, State> {
 
   componentWillReceiveProps ({ activeTag }: Props) {
     this.setState({ articleListIn: false })
-    this.getArticles(activeTag)
+    // this.getArticles(activeTag)
   }
 
   getArticles (activeTag: string) {
-    Swagger.apis.tags.getTagsArticles({ tag: activeTag })
+    Axios.get('/api/article', { params: { tag: activeTag }})
       .then(({ data }: any) => {
         this.setState({ articleList: data })
         setTimeout(() => {

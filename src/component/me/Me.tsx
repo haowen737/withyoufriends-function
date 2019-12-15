@@ -5,11 +5,13 @@ import { Dispatch } from 'redux'
 import { themeChange, WithYouAction } from '../../ducks/global'
 import { BlogTheme } from '../../Hero.service'
 import { ThemeState, StoreState } from '@types'
+import SocialLinkList from './SocialLinkList'
 
 import './me.css'
 
 interface Props {
   themeChange: any
+  theme: ThemeState;
 }
 
 
@@ -29,6 +31,7 @@ class Me extends React.Component<Props> {
     return (
       <div>
         {this.renderWindow()}
+        <SocialLinkList theme={this.props.theme} />
       </div>
     )
   }

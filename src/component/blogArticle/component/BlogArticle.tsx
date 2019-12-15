@@ -4,9 +4,6 @@ import Axios from 'axios'
 
 import LoadingBall from '../../../widgets/loadingBall/LoadingBall'
 
-import { Swagger } from '@utils'
-// import BlogTPComment from '../blogTPComment'
-// import BlogArticleFooter from './BlogArticleFooter'
 import { articleWrap, loadingWrap } from '../style' 
 
 import '../BlogArticle.css'

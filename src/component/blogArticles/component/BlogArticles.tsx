@@ -2,7 +2,6 @@ import * as React from 'react'
 import { observer, inject } from "mobx-react"
 import Axios from 'axios'
 import ArticleItem from './ArticleItem'
-import { Swagger } from '@utils'
 
 import { articleList } from '../style'
 
@@ -25,7 +24,6 @@ export default class BlogArticles extends React.Component<any, State> {
   }
   
   getArticles () {
-    // Swagger.apis.article.getArticles()
     Axios.get('/api/article/list')
       .then(({data}: any) => {
         const { articles } = data

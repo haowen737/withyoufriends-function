@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { Transition, TransitionGroup } from 'react-transition-group'
+import Axios from 'axios'
 
 import ArticleList from './ArticleList'
-import { Swagger } from '@utils'
 
 // import * as TransitionConfig from './TransitionConfig'
 import { defaultStyle, transitionStyles, defaultHeaderStyle, transitionHeaderStyles } from './TransitionConfig'
@@ -34,11 +34,11 @@ export default class BlogTags extends React.Component<object, State> {
   }
 
   componentWillMount () {
-    this.getTagList()
+    // this.getTagList()
   }
 
   getTagList () {
-    Swagger.apis.tags.getTags()
+    Axios.get('/api/tag/list')
       .then(({ data }: any) => {
         this.setState({ tags: data, activeTag: data[0] })
       })

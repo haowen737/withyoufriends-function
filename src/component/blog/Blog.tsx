@@ -10,7 +10,6 @@ import BlogArticles from '../blogArticles'
 import BlogArticle from '../blogArticle'
 import BlogTags from '../blogTags/BlogTags'
 import BlogHeader from '../blogHeader/BlogHeader'
-import BlogCollect from '../blogCollect/BlogCollect'
 
 import { BlogTheme } from '../../Hero.service'
 
@@ -35,7 +34,6 @@ class Blog extends React.Component<Props> {
             <Route path="/blog" exact component={BlogArticles} />
             <Route path="/blog/tags" exact component={BlogTags} />
             <Route path="/blog/article/:id" component={BlogArticle} />
-            <Route path="/blog/collect" exact component={BlogCollect} />
           </Switch>
         </div>
       </React.Fragment>
