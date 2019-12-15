@@ -11,7 +11,8 @@ import './me.css'
 
 interface Props {
   themeChange: any
-  theme: ThemeState;
+  theme: ThemeState
+  history: any
 }
 
 
@@ -27,9 +28,13 @@ class Me extends React.Component<Props> {
   }
   
   render() {
-    
+    const { history } = this.props
     return (
       <div>
+        <a className="signin-navback" onClick={history.goBack}>
+          <i className="iconfont">&#xe608;</i>
+          Back To Blog
+        </a>
         {this.renderWindow()}
         <SocialLinkList theme={this.props.theme} />
       </div>

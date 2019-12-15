@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import { ThemeState } from '@types'
+import { SocialLinkStyle } from './styled'
 
 interface Props {
   theme: ThemeState
@@ -32,7 +33,7 @@ export default class SocialLinkList extends React.Component<Props, object> {
     const { theme } = this.props
 
     return (
-      <div className="sociallink-list-container" style={{color: theme.color}}>
+      <div className={SocialLinkStyle} style={{color: theme.color}}>
         <i className="iconfont" style={this.renderStyle(600)} onClick={() => { this.onClickSocial(0) }}>&#xe611;</i>
         <i className="iconfont" style={this.renderStyle(800)} onClick={() => { this.onClickSocial(1) }}>&#xe619;</i>
         <i className="iconfont" style={this.renderStyle(1100)} onClick={() => { this.onClickSocial(2) }}>&#xe600;</i>
