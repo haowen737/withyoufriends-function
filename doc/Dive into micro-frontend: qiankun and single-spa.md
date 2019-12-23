@@ -8,7 +8,7 @@ This may help you understand how [qiankun](https://github.com/umijs/qiankun) wor
 Register an app to qiankun is easy, call registerMicroApps, and put necessary app settings as params, name, entry, render, active.
 
 qiankun uses `importEntry` extract html tamplate and spa's main funciton from sub application.
-`import { importEntry } from 'import-html-entry';`
+```import { importEntry } from 'import-html-entry';```
 
 the template will be the container for certain sub-application, while the sub application's script will be executed under certain `sandbox` to get `mount`, `unmount`.
 
