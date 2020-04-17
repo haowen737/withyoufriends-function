@@ -45,7 +45,9 @@ When app loaded, `webpack-dev-server` opens a Websocket connect to the WDS clien
 | a["{\"type\":\"hash\",\"data\":\"ccc6be1863290492f438\"}"]  | 58 | 11:51:14.108
 | a["{\"type\":\"ok\"}"]  | 22 | 11:51:14.109
 
+
 *download*
+
 |manifest, new chunk|
 |---|
 |GET /3b3d2c64fc98e2a81721.hot-update.json HTTP/1.1|
