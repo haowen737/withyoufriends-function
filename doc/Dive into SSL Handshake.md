@@ -1,5 +1,6 @@
+# Unfinished
 
-
+> Using wireshark 
 ## Client Hello
 ```
 TLSv1.3 Record Layer: Handshake Protocol: Client Hello
@@ -51,6 +52,5 @@ TLSv1.3 Record Layer: Handshake Protocol: Server Hello
 [TCP segment of a reassembled PDU] "protocol data unit"
 Server may send multiple tcp segment here since server response a lot of data, that won't fit in a single TCP segment.
 
-
-## Cipher Suites
+## 
 
