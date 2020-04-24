@@ -22,6 +22,17 @@
   color: #333;
   cursor: pointer;
 }
+.logo {
+  display: inline-block;
+  font-size: 2rem;
+  color: #333;
+  font-weight: 400;
+  line-height: 60px;
+  padding: 0 10rem;
+  transition: all .6s ease;
+  transition-delay: 1s;
+  animation: logo-animation 1s ease;
+}
 @keyframes blogheader-nav-animation {
   0% {
     opacity: 0;
@@ -32,6 +43,22 @@
     opacity: 1;
     /* transform: translate3d(0, 0, 0); */
     transform: translateY(0);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .logo {
+    display: none;
+  }
+  .nav {
+    width: 100%;
+    right: 0;
+    transform: translateY(-50%);
+    line-height: 60px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .nav a {
+    padding: 0 .5rem;
   }
 }
 /* transition */

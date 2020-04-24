@@ -17,7 +17,7 @@ class App extends React.Component<any> {
           <Switch>
             <Route path="/blog" component={Blog} />
             <Route path="/me" component={Me} />
-            {/* <Route path="/" exact component={Blog} /> */}
+            {/* <Route path="/" exact component={Greet} /> */}
             <Route path="/" exact>
               <Redirect to="/blog" />
             </Route>
