@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 
 import Nomatch from '../nomatch/Nomatch'
 import Greet from '../greet'
@@ -17,7 +17,10 @@ class App extends React.Component<any> {
           <Switch>
             <Route path="/blog" component={Blog} />
             <Route path="/me" component={Me} />
-            <Route path="/" exact component={Greet} />
+            {/* <Route path="/" exact component={Blog} /> */}
+            <Route path="/" exact>
+              <Redirect to="/blog" />
+            </Route>
             <Route component={Nomatch} />
           </Switch>
         </div>
