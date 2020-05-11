@@ -95,3 +95,38 @@ when calling `mount` function on the certain sandbox, properties stored in snaps
   └─▶  new Proxy(window, { set, get })   │
     └────────────────────────────────────┘
 ```
+
+
+## Route
+> What will happen if route changes before sub-app mount?
+
+```single-spa``` module will listen to the location change, and check if the matched sub-app was loaded or not, it will load app first if the app is not ready.
+
+```js
+// single-spa/src/navigation/navigation-events.js
+// We will trigger an app change for any routing events.
+window.addEventListener('hashchange', urlReroute);
+window.addEventListener('popstate', urlReroute);
+```
+
+Each location change will trigger ```single-spa``` check app route match ```activeRule```.
+```js
+// single-spa/src/navigation/reroute.js
+if (isStarted()) {
+  return performAppChanges();
+} else {
+  return loadApps();
+}
+```
+
+## Isolated Style
+
+- Dynamic Stylesheet
+
+Since each sub-app was mounted in the container, styles will only affect its own scope. and destroy target dom will also remove the whole stylesheets and trigger browser to repaint.
+
+- ShadowDOM
+
+> [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) providing a way to attach a hidden separated DOM to an element, browser make sure its style and behavior separate from other parts on the page.
+
+Qiankun also provides the ability to load sub-app under Shadow DOM, but this may cause some issues when sub-app using ```document.body```, such as ```Modal``` component, when rendered under HTML body, the style may not be applied as expected. This is because all the style sheets can only affect inside shadow dom.
