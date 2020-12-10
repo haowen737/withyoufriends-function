@@ -13,15 +13,15 @@ interface ActicleProps {
 
 const SkeletorSetting = {
   article: {
-    title: '____________________________',
-    summary: '______________________________________________________',
-    created_at: '____________'
+    title: '_____________________________________',
+    // summary: '______________________________________________________',
+    // created_at: '____________'
   }
 }
 
 const ArticleSelf = ({ article, index }: ActicleProps) => {
   const Title = createSkeletonElement('h2', pendingHomeStyle)
-  const Summary = createSkeletonElement('p', pendingHomeStyle)
+  // const Summary = createSkeletonElement('p', pendingHomeStyle)
   const Date = createSkeletonElement('span', pendingHomeStyle)
   return (
     <Link to={ article.id
@@ -32,7 +32,7 @@ const ArticleSelf = ({ article, index }: ActicleProps) => {
         <Title className="article-title">{article.title}</Title>
         <Date className="article-date">{DateFormat(article.created_at || 0, 'YYYY-MM-DD hh:mm:ss')}</Date>
       </div>
-      <Summary className="article-summary">{article.summary}</Summary>
+      {/* <Summary className="article-summary">{article.summary}</Summary> */}
     </Link>
   )  
 }

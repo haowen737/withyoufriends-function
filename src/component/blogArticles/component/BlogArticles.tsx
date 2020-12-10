@@ -15,7 +15,7 @@ export default class BlogArticles extends React.Component<any, State> {
   constructor (props: object) {
     super(props)
     this.state = {
-      articles: [null, null, null, null]
+      articles: [null, null, null, null, null]
     }
   }
   
