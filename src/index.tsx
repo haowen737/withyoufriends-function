@@ -4,6 +4,7 @@ import { Router } from 'react-router-dom'
 import { observable} from "mobx"
 import { Provider as MProvider } from "mobx-react"
 import { createBrowserHistory } from 'history'
+import { Analytics } from "@vercel/analytics/react"
 
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
@@ -27,6 +28,7 @@ const renderRoot = () => {
         <MProvider $api={observable({})}>
           <Router history={history}>
             <App />
+            <Analytics></Analytics>
           </Router>
         </MProvider>
       </Provider>
